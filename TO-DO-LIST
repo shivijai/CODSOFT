@@ -1,0 +1,46 @@
+def ToDo():
+    Task_List = []
+    print("     WELCOME TO THE TO DO LIST APP    ")
+    
+    task = int(input("enter total number of task:"))
+    
+    for x in range(1,task):
+        a = input("enter task {} : ".format(x))
+        Task_List.append(a)
+    print("List of Tasks are :{}".format(Task_List))
+
+    while True:
+        print("Enter your choice:")
+        perform = int(input("1.ADD\n" "2.UPDATE\n" "3.DELETE\n" "4.VIEW\n" "5.EXIT\n"))
+
+        if perform == 1:
+                      b = input("enter task :")
+                      Task_List.append(b)
+                      print("task {} added successfully!".format(b))
+        elif perform == 2:
+            up_task = input("enter task which you want to add:")
+            if up_task in Task_List:
+                up = input("enter new task : ")
+                ind = Task_List.index(up_task)
+                Task_List[ind] = up
+                print("update list of task:{}".format(up))
+                
+        elif perform == 3:
+            del_task = input("enter task which you want to delete:")
+            if del_task in Task_List:
+                ind = Task_List.index(del_task)
+                del Task_List[ind]
+                print("task {} deleted successfully!".format(del_task))
+        elif perform == 4:
+            print("List of Task:{}".format(Task_List))
+
+        elif perform == 5:
+            print("Stop program!")
+            break
+        else :
+            print("invalid task ")
+
+ToDo()
+            
+                      
+    
