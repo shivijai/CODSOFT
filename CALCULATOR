@@ -1,0 +1,42 @@
+def cal(num1 , num2):
+    
+    if operator == 1:
+        result = num1 + num2
+        print("Addition of {} and {} is:{} ".format(num1,num2,result))
+    elif operator == 2:
+        if num1 > num2:
+            result = num1 - num2
+            print("subtract from {} to {} :{} ".format(num1,num2,result))
+        else:
+            result = num2 - num1
+            print("subtract from {} to {} :{} ".format(num2,num1,result))
+        
+        
+    elif operator == 3:
+        result = num1 * num2
+        print("multiplication of {} and {}:{}".format(num1,num2,result))
+    elif operator == 4:
+        if num1 > num2:
+            result = num1 / num2
+            print("division of {} by {} :{} ".format(num1,num2,result))
+        else:
+            result = num2 / num1
+            print("division of {} by {} :{} ".format(num2,num1,result))
+       
+    elif operator == 5:
+        result1 = num1 ** num2
+        result2 = num2 ** num1
+        print("{} raise to the power {} :{}".format(num1,num2,result1))
+        print("{} raise to the power {} :{}".format(num2,num1,result2))
+
+
+num1 = int(input("enter the first number:"))
+num2 = int(input("enter the second number:"))
+
+print("\nChoose any one operator:")
+print("1. ADD\n" "2.SUBTRACT\n"  "3. MULTIPLY\n" "4. DIVIDE\n" "5. POWER\n")
+
+operator = int(input("any one operator 1/2/3/4/5:"))
+
+cal(num1,num2)
+
