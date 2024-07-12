@@ -1,0 +1,33 @@
+print("    WELCOME TO ROCK PAPER SCISSORS  ")
+print("Some Rules for Game : ")
+print("1.ROCK\n  Rock - Rock = Tie\n  Rock-Paper = Paper win\n  Rock-Scissor = Rock win\n")
+print("2.PAPER\n  Paper - Paper = Tie\n  Paper - Rock = Paper\n  Paper - Scissor = Scissor\n")
+print("3.SCISSOR\n  Paper - Paper = Tie\n  Paper - Rock = Paper\n  Paper - Scissor = Scissor\n")
+
+import random
+item_list = ["Rock","Paper","Scissor"]
+
+player_choice = input("Enter: Rock , Paper , Scissor  -> ")
+computer_choice = random.choice(item_list)
+
+print("Player Choice = {} , Computer Choice = {}".format(player_choice,computer_choice))
+
+if player_choice == computer_choice :
+    print("Match Tie! , Both choose same")
+elif player_choice == "Rock":
+    if computer_choice == "Paper":
+        print("Computer Win! , Paper cover Rock")
+    else:
+        print("Player Win! , Rock break Scissor")
+elif player_choice == "Paper":
+    if computer_choice == "Scissor":
+        print("Computer Win! , Scissor cut Paper")
+    else :
+        print("Player Win! , Paper cover Rock")
+elif player_choice == "Scissor":
+    if computer_choice == "Rock":
+        print("Computer Win! , Rock break Scissor")
+    else :
+        print("Player Win! , Scissor cut Paper")
+
+
